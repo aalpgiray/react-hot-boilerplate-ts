@@ -20,9 +20,7 @@ export function errorLoading(err: any) {
 }
 
 export function loadRoute(cb: any) {
-    return (module: any) => {
-        return cb(null, module.default);
-    }
+    return (module: any) => cb(null, module.default)
 }
 
 
