@@ -59,8 +59,8 @@ export const links: ILink[] = [
         name: "About"
     },
     {
-        path:"/contact",
-        name:"Contact"
+        path: "/contact",
+        name: "Contact"
     }
 ]
 
