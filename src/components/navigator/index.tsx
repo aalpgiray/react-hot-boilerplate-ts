@@ -9,13 +9,13 @@ interface INavigator {
 
 export default class Navigator extends React.Component<INavigator, {}>{
     calculateLinks() {
-        return this.props.routes.map(r => <Link to={r.path} key={r.path}>{r.name}</Link>)
+        return this.props.routes.map(r => <li><Link to={r.path} key={r.path}>{r.name}</Link></li>)
     }
     render() {
         return (
-            <div>
+            <ul>
                 {this.calculateLinks()}
-            </div>
+            </ul>
         )
     }
 }

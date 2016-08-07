@@ -15,11 +15,11 @@ interface IRoute extends ILink {
     getComponent(location: any, callback: any): void
 }
 
-export function errorLoading(err: any) {
+function errorLoading(err: any) {
     console.error('Dynamic page loading failed', err);
 }
 
-export function loadRoute(cb: any) {
+function loadRoute(cb: any) {
     return (module: any) => cb(null, module.default)
 }
 
