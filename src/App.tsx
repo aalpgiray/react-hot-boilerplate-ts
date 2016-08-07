@@ -4,6 +4,10 @@ import { Link } from "react-router"
 import Navigator from "./components/navigator"
 import { links } from "./routes"
 
+export class blada {
+  bla: "da"
+}
+
 export default class App extends Component<{}, {}> {
   componentWillUnmount() {
     alert("Hey stop! You ruined the hot reload.");

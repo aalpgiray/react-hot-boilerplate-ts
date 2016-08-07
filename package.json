@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node server.js",
     "lint": "eslint src",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "build": "webpack --config webpack.config.production.js"
   },
   "repository": {
     "type": "git",
