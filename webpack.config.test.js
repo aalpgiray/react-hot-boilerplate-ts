@@ -3,30 +3,17 @@ var webpack = require('webpack')
 var WebpackNotifierPlugin = require('webpack-notifier')
 
 module.exports = {
+  // target: 'node',
   devtool: '#inline-source-map',
   entry: {
     app: [
-      'webpack-dev-server/client?http://localhost:3000',
-      'webpack/hot/only-dev-server',
-      './src/index'
-    ],
-    vendor: [
-      'babel-polyfill', // might be not nessasary !!!
-      'immutable',
-      // 'material-ui',
-      'redux',
-      'react',
-      'react-dom',
-      'react-router',
-      'react-redux',
-      'react-router-redux',
-    // 'redux-promise-middleware'
+      'index'
     ]
   },
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: '[name].js',
-    publicPath: '/static/'
+    path: path.resolve('tests'),
+    filename: 'index.js',
+    publicPath: '/tests/'
   },
   module: {
     loaders: [
@@ -38,16 +25,20 @@ module.exports = {
       { test: /\.scss$/,
         loaders: ['style', 'css?sourceMap', 'sass?sourceMap'],
         include: path.join(__dirname, 'src')
+      },
+      {
+        test: /\.json$/,
+        loaders: ['json-loader']
       }
+
     ]
   },
   resolve: {
     extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js', '.jsx', '.scss'],
-    modules: [path.resolve('./src'), 'node_modules']
+    modules: [path.resolve('./tests'), 'node_modules']
   },
   plugins: [
-    new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
+    // new webpack.IgnorePlugin(/^fs$/),
     new WebpackNotifierPlugin({ alwaysNotify: true }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')

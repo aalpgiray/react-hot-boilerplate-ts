@@ -14,5 +14,12 @@
     "redux": "registry:dt/redux#3.5.2+20160703092728",
     "redux-promise-middleware": "registry:dt/redux-promise-middleware#0.0.0+20160108032528",
     "systemjs": "registry:dt/systemjs#0.19.29+20160702105636"
+  },
+  "devDependencies": {
+    "chai": "registry:npm/chai#3.5.0+20160723033700"
+  },
+  "globalDevDependencies": {
+    "mocha": "registry:dt/mocha#2.2.5+20160720003353",
+    "react-addons-test-utils": "registry:dt/react-addons-test-utils#0.14.0+20160427035638"
   }
 }
