@@ -32,7 +32,6 @@ export const shouldHaveHome = describe('Navigation Component', () => {
                 <li key="/about"><Link to="/about">About</Link></li>
             </ul>
         )
-
     })
 })
 
