@@ -26,10 +26,13 @@ export const shouldHaveHome = describe('Navigation Component', () => {
 
         const renderResult = shalowRenderer.getRenderOutput();
 
-        expect(renderResult.props.children).to.eqls([
-            <li key="/"><Link to="/">Home</Link></li>,
-            <li key="/about"><Link to="/about">About</Link></li>
-        ])
+        expect(renderResult).to.eqls(
+            <ul>
+                <li key="/"><Link to="/">Home</Link></li>
+                <li key="/about"><Link to="/about">About</Link></li>
+            </ul>
+        )
+
     })
 })
 
