@@ -10,7 +10,15 @@
         "noImplicitAny": false,
         "sourceMap": true,
         "outDir": "ts-build",
-        "jsx": "preserve"
+        "jsx": "preserve",
+        "paths": {
+            "*": [
+                "*",
+                "components/*",
+                "actions/*",
+                "reducers/*"
+            ]
+        }
     },
     "exclude": [
         "node_modules"
