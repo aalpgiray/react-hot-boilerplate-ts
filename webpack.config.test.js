@@ -22,7 +22,8 @@ module.exports = {
         loaders: ['react-hot', 'babel', 'ts'],
         include: path.join(__dirname, 'src')
       },
-      { test: /\.scss$/,
+      {
+        test: /\.scss$/,
         loaders: ['style', 'css?sourceMap', 'sass?sourceMap'],
         include: path.join(__dirname, 'src')
       },
@@ -35,7 +36,14 @@ module.exports = {
   },
   resolve: {
     extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js', '.jsx', '.scss'],
-    modules: [path.resolve('./tests'), 'node_modules']
+    modules: [
+      path.resolve('./tests'),
+      path.resolve('./src/components'),
+      path.resolve('./src/reducers'),
+      path.resolve('./src/actions'),
+      path.resolve('./src/middlewares'),
+      'node_modules'
+    ],
   },
   plugins: [
     // new webpack.IgnorePlugin(/^fs$/),

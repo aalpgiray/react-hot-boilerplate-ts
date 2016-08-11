@@ -16,7 +16,8 @@
                 "*",
                 "components/*",
                 "actions/*",
-                "reducers/*"
+                "reducers/*",
+                "middlewares/*"
             ]
         }
     },
