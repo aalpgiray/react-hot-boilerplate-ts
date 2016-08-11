@@ -1,7 +1,6 @@
 import { applyMiddleware, createStore, ReducersMapObject, compose } from "redux"
 import promise from "redux-promise-middleware"
 import { logger } from "./middlewares/logger"
-import { Map } from "immutable"
 
 import reducers from "./reducers"
 

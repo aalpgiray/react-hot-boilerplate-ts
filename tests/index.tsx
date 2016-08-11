@@ -1,0 +1,1 @@
+import { shouldHaveHome } from ".././src/components/navigator/tests"

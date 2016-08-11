@@ -4,6 +4,6 @@ import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 
 export default class ContactPage extends Component<{}, {}>{
     render() {
-        return <h1>Contact Page !!!</h1>
+        return <h1>Contact Page</h1>
     }
 }

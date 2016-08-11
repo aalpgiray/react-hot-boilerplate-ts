@@ -7,7 +7,7 @@ module.exports = {
     app: [
       './src/index'
     ],
-    vendor:[
+    vendor: [
       'babel-polyfill', // might be not nessasary !!!
       'immutable',
       // 'material-ui',
@@ -17,7 +17,7 @@ module.exports = {
       'react-router',
       'react-redux',
       'react-router-redux',
-      // 'redux-promise-middleware'
+    // 'redux-promise-middleware'
     ]
   },
   output: {
@@ -26,11 +26,17 @@ module.exports = {
     publicPath: '/static/'
   },
   module: {
-    loaders: [{
-      test: /\.tsx?$/,
-      loaders: ['react-hot', 'babel', 'ts'],
-      include: path.join(__dirname, 'src')
-    }]
+    loaders: [
+      {
+        test: /\.tsx?$/,
+        loaders: ['babel', 'ts'],
+        include: path.join(__dirname, 'src')
+      },
+      { test: /\.scss$/,
+        loaders: ['style', 'css?sourceMap', 'sass?sourceMap'],
+        include: path.join(__dirname, 'src')
+      }
+    ]
   },
   resolve: {
     extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js', '.jsx', '.scss'],
@@ -45,7 +51,7 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
-     new webpack.optimize.UglifyJsPlugin({
+    new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
       },
@@ -53,6 +59,6 @@ module.exports = {
         comments: false
       },
       sourceMap: false
-    }),
+    })
   ]
 }
