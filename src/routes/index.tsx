@@ -3,8 +3,8 @@ import { Router, browserHistory } from "react-router"
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 import { Provider } from "react-redux"
 
-import store from ".././store"
-import App from "../App"
+import store from "store"
+import App from "App"
 
 export interface ILink {
     path: string;
