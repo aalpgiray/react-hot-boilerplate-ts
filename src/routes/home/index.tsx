@@ -9,6 +9,6 @@ import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 // })
 export default class HomePage extends Component<{}, {}>{
     render() {
-        return <h1>Home Page</h1>
+        return <h1>Home Page !!!</h1>
     }
 }

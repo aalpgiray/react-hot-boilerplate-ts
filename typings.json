@@ -10,7 +10,9 @@
   },
   "globalDependencies": {
     "axios": "registry:dt/axios#0.9.1+20160629101425",
+    "material-ui": "registry:dt/material-ui#0.15.1+20160720000941",
     "react": "registry:dt/react#0.14.0+20160802191555",
+    "react-tap-event-plugin": "registry:dt/react-tap-event-plugin#0.0.0+20160602142434",
     "redux": "registry:dt/redux#3.5.2+20160703092728",
     "redux-promise-middleware": "registry:dt/redux-promise-middleware#0.0.0+20160108032528",
     "systemjs": "registry:dt/systemjs#0.19.29+20160702105636"
