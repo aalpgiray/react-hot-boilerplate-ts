@@ -4,7 +4,7 @@ import { Link } from "react-router"
 import { expect } from "chai"
 
 import Navigator, { INavigator } from "./index"
-import { ILink } from "../../routes"
+import { ILink } from "routes"
 
 export const shouldHaveHome = describe('Navigation Component', () => {
     it("Does it render as expected", () => {

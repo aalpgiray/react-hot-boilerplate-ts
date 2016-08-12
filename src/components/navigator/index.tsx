@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Link } from "react-router"
 
-import { ILink } from "../.././routes"
+import { ILink } from "routes"
 
 export interface INavigator {
     routes: ILink[]
