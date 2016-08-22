@@ -43,11 +43,11 @@ module.exports = {
     modules: [
       path.resolve('./src'),
       path.resolve('./src/components'),
-      path.resolve('./src/middlewares'),
       path.resolve('./src/reducers'),
       path.resolve('./src/actions'),
+      path.resolve('./src/middlewares'),
       'node_modules'
-    ]
+    ],
   },
   plugins: [
     new WebpackNotifierPlugin({ alwaysNotify: true }),

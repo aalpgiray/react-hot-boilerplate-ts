@@ -20,7 +20,7 @@ module.exports = {
       'react-router',
       'react-redux',
       'react-router-redux',
-    // 'redux-promise-middleware'
+      // 'redux-promise-middleware'
     ]
   },
   output: {
@@ -35,7 +35,8 @@ module.exports = {
         loaders: ['react-hot', 'babel', 'ts'],
         include: path.join(__dirname, 'src')
       },
-      { test: /\.scss$/,
+      {
+        test: /\.scss$/,
         loaders: ['style', 'css?sourceMap', 'sass?sourceMap'],
         include: path.join(__dirname, 'src')
       }
@@ -46,11 +47,12 @@ module.exports = {
     modules: [
       path.resolve('./src'),
       path.resolve('./src/components'),
-      path.resolve('./src/middlewares'),
+
       path.resolve('./src/reducers'),
       path.resolve('./src/actions'),
+      path.resolve('./src/middlewares'),
       'node_modules'
-    ]
+    ],
   },
   plugins: [
     new webpack.NamedModulesPlugin(),
