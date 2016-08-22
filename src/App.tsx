@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-
-import { Link } from "react-router"
-import injectTapEventPlugin from 'react-tap-event-plugin';
+import injectTapEventPlugin from 'react-tap-event-plugin'
 
 import Navigator from 'navigator/navigator'
 import { links } from 'routes'
@@ -17,7 +15,7 @@ export default class App extends Component<{}, {}> {
   }
 
   render() {
-      return (
+    return (
       <div>
         <Navigator routes={links} />
         <div class="pageContent">
