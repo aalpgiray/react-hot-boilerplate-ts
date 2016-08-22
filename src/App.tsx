@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-
-import { Link } from "react-router"
 import injectTapEventPlugin from 'react-tap-event-plugin'
 
 import Navigator from 'navigator/navigator'
