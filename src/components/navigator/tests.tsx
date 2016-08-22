@@ -3,13 +3,13 @@ import { createRenderer } from "react-addons-test-utils"
 import { Link } from "react-router"
 import { expect } from "chai"
 
-import Navigator, { INavigator } from "./index"
+import Navigator from "./navigator"
 import { ILink } from "routes"
 
 export const shouldHaveHome = describe('Navigation Component', () => {
     it("Does it render as expected", () => {
 
-        const shalowRenderer = createRenderer();
+        const shallowRenderer = createRenderer();
 
         const routes: ILink[] = [
             {
@@ -22,9 +22,9 @@ export const shouldHaveHome = describe('Navigation Component', () => {
             }
         ]
 
-        shalowRenderer.render(<Navigator routes={routes} />)
+        shallowRenderer.render(<Navigator routes={routes} />)
 
-        const renderResult = shalowRenderer.getRenderOutput();
+        const renderResult = shallowRenderer.getRenderOutput();
 
         expect(renderResult).to.eqls(
             <ul>

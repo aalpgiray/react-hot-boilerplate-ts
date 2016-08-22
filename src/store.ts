@@ -1,9 +1,9 @@
 import { applyMiddleware, createStore, ReducersMapObject, compose } from "redux"
 import promise from "redux-promise-middleware"
-import { logger } from "middlewares/logger"
+import { logger } from "logger"
 
-import reducers from "reducers/combined-reducers"
-import { IUser } from 'reducers/user-reducer/user-reducer';
+import reducers from "combined-reducers"
+import { IUser } from 'user-reducer/user-reducer';
 
 export interface IStore extends ReducersMapObject {
     user

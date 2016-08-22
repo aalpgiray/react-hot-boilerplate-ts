@@ -1,16 +1,15 @@
-import React, { Component } from 'react';
-import { Link } from "react-router"
+import React, { Component } from 'react'
 
-import Navigator from "components/navigator"
-import { links } from "routes"
+import Navigator from 'navigator/navigator'
+import { links } from 'routes'
 
 export default class App extends Component<{}, {}> {
   componentWillUnmount() {
-    alert("Hey stop! You ruined the hot reload.");
+    alert(`Hey stop! You ruined the hot reload.`);
   }
 
   render() {
-    return (
+      return (
       <div>
         <Navigator routes={links} />
         <div class="pageContent">

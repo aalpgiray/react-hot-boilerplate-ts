@@ -43,7 +43,14 @@ module.exports = {
   },
   resolve: {
     extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js', '.jsx', '.scss'],
-    modules: [path.resolve('./src'), 'node_modules']
+    modules: [
+      path.resolve('./src'),
+      path.resolve('./src/components'),
+      path.resolve('./src/middlewares'),
+      path.resolve('./src/reducers'),
+      path.resolve('./src/actions'),
+      'node_modules'
+    ]
   },
   plugins: [
     new webpack.NamedModulesPlugin(),
