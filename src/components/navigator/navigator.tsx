@@ -7,7 +7,6 @@ export interface INavigator {
     routes: ILink[]
 }
 
-// test
 export default class Navigator extends Component<INavigator, {}>{
     calculateLinks() {
         return this.props.routes.map(r => (
