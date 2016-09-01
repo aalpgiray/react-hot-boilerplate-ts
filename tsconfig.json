@@ -15,7 +15,6 @@
             "*": [
                 "*",
                 "components/*",
-
                 "actions/*",
                 "reducers/*",
                 "middlewares/*"

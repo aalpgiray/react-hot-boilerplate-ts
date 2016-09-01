@@ -20,7 +20,8 @@ module.exports = {
       'react-router',
       'react-redux',
       'react-router-redux',
-      // 'redux-promise-middleware'
+      'bpmn-js/lib/Modeler'
+    // 'redux-promise-middleware'
     ]
   },
   output: {
@@ -39,20 +40,23 @@ module.exports = {
         test: /\.scss$/,
         loaders: ['style', 'css?sourceMap', 'sass?sourceMap'],
         include: path.join(__dirname, 'src')
+      },
+      {
+        test: /\.json$/,
+        loaders: ['json']
       }
     ]
   },
   resolve: {
-    extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js', '.jsx', '.scss'],
+    extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js', '.jsx', '.css', '.scss'],
     modules: [
       path.resolve('./src'),
       path.resolve('./src/components'),
-
       path.resolve('./src/reducers'),
       path.resolve('./src/actions'),
       path.resolve('./src/middlewares'),
       'node_modules'
-    ],
+    ]
   },
   plugins: [
     new webpack.NamedModulesPlugin(),
