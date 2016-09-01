@@ -20,7 +20,6 @@ module.exports = {
       'react-router',
       'react-redux',
       'react-router-redux',
-      'bpmn-js/lib/Modeler'
     // 'redux-promise-middleware'
     ]
   },
@@ -40,10 +39,6 @@ module.exports = {
         test: /\.scss$/,
         loaders: ['style', 'css?sourceMap', 'sass?sourceMap'],
         include: path.join(__dirname, 'src')
-      },
-      {
-        test: /\.json$/,
-        loaders: ['json']
       }
     ]
   },
