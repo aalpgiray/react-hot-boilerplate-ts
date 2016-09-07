@@ -14,6 +14,6 @@ interface IWindow extends Window {
 
 declare var window: IWindow;
 
-const middleware = applyMiddleware(logger({ logServiceUrl: "http://rest.learncode.academy/api/testapp/log" }), promise());
+const middleware = applyMiddleware(promise());
 
 export default createStore(reducers, compose(middleware, window.devToolsExtension && window.devToolsExtension()));
