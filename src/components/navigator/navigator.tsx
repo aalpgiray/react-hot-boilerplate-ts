@@ -1,7 +1,13 @@
-import React, { Component, Props } from 'react'
+import React, { Component } from 'react'
 import { Link } from 'react-router'
 
 import { ILink } from 'routes'
+
+import {
+    activeLinkStyle,
+    liStyles,
+    ulStyles
+} from "./style"
 
 export interface INavigator {
     routes: ILink[]
@@ -10,19 +16,26 @@ export interface INavigator {
 export default class Navigator extends Component<INavigator, {}>{
     calculateLinks() {
         return this.props.routes.map(r => (
-            <li key={r.path}>
-                <Link to={r.path}>
-                    {r.name}
-                </Link>
-            </li>
+            <AppLink path={r.path} key={r.path} name={r.name} />
         ))
     }
-
     render() {
         return (
-            <ul>
+            <ul style={ulStyles}>
                 {this.calculateLinks()}
             </ul>
+        )
+    }
+}
+
+class AppLink extends Component<ILink, {}>{
+    render() {
+        return (
+            <li style={liStyles}>
+                <Link to={this.props.path} activeStyle={activeLinkStyle}>
+                    {this.props.name}
+                </Link>
+            </li>
         )
     }
 }

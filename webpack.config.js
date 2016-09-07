@@ -50,6 +50,7 @@ module.exports = {
       path.resolve('./src/reducers'),
       path.resolve('./src/actions'),
       path.resolve('./src/middlewares'),
+      path.resolve('./src/helpers'),
       'node_modules'
     ]
   },

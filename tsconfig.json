@@ -8,6 +8,8 @@
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
         "noImplicitAny": false,
+        "strictNullChecks": true,
+        "noUnusedParameters": true,
         "sourceMap": true,
         "outDir": "ts-build",
         "jsx": "preserve",
@@ -17,7 +19,8 @@
                 "components/*",
                 "actions/*",
                 "reducers/*",
-                "middlewares/*"
+                "middlewares/*",
+                "helpers/*"
             ]
         }
     },

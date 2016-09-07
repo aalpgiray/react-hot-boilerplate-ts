@@ -1,27 +1,32 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
-import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 import { IStore } from "store"
 
-import { IUser } from "reducers/user-reducer/user-reducer"
+import { USER } from "user-reducer"
+import { UserActions } from "user-actions"
 
 interface IHome {
     dispatch?: any;
-    user?: IUser;
+    user: USER;
 }
 
-@connect((state: IStore) => {
-    const props = {
+@connect((state: IStore): IHome => {
+    return {
         user: state.user
     }
-    return props;
 })
 export default class HomePage extends Component<IHome, {}>{
+    changeName() {
+        this.props.dispatch(UserActions.setUserName("Aykut Alpgiray Ateş"));
+    }
     render() {
         return (
             <div>
-                <h3>Name: {this.props.user.get("name")}</h3>
-                <h3>Age: {this.props.user.get("age")}</h3>
+                <h3>Name: {this.props.user.Name}</h3>
+                <h3>Age: {this.props.user.Age}</h3>
+                <button onClick={() => {
+                    this.changeName();
+                } }> Adı değiştir </button>
             </div>
         )
     }

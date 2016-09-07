@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { Router, browserHistory } from "react-router"
-import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
+import { syncHistoryWithStore } from 'react-router-redux'
 import { Provider } from "react-redux"
 
 import store from "store"
