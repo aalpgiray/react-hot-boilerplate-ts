@@ -16,17 +16,26 @@ interface IHome {
     }
 })
 export default class HomePage extends Component<IHome, {}>{
-    changeName() {
-        this.props.dispatch(UserActions.setUserName("Aykut Alpgiray Ateş"));
+    shouldComponentUpdate(nextState: IStore) {
+        return this.props.user != nextState.user;
+    }
+    changeName(_name: string) {
+        this.props.dispatch(UserActions.setUserName(_name));
+    }
+    changeAge(_age: number) {
+        this.props.dispatch(UserActions.setUserAge(_age));
     }
     render() {
         return (
             <div>
-                <h3>Name: {this.props.user.Name}</h3>
-                <h3>Age: {this.props.user.Age}</h3>
-                <button onClick={() => {
-                    this.changeName();
-                } }> Adı değiştir </button>
+                <h3>Name: {this.props.user.Name} </h3>
+                <h3>Age: {this.props.user.Age} </h3>
+                <input type="text" value={this.props.user.Name} onChange={(_e: { target: HTMLInputElement }) => {
+                    this.changeName(_e.target.value);
+                } } />
+                <input type="number" value={this.props.user.Age} onChange={(_e: { target: HTMLInputElement }) => {
+                    this.changeAge(parseInt(_e.target.value));
+                } } />
             </div>
         )
     }
