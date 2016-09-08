@@ -32,7 +32,7 @@ module.exports = {
     loaders: [
       {
         test: /\.tsx?$/,
-        loaders: ['react-hot', 'babel', 'ts'],
+        loaders: ['react-hot-loader/webpack', 'babel', 'ts'],
         include: path.join(__dirname, 'src')
       },
       {
